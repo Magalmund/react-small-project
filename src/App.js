@@ -1,15 +1,12 @@
 import React from 'react';
+import { Block } from './Block';
 import './index.scss';
-import { Success } from './components/Success';
-import { Users } from './components/Users';
-
-// Тут список пользователей: https://reqres.in/api/users
 
 function App() {
   return (
     <div className="App">
-      <Users />
-      {/* <Success /> */}
+      <Block value={0} currency="RUB" onChangeCurrency={(cur) => console.log(cur)} />
+      <Block value={0} currency="USD" />
     </div>
   );
 }
